@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';            //splash screen
+import 'package:flutter/material.dart'; //splash screen
 import 'home1.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -29,59 +29,71 @@ class _SplashState extends State<Splash> {
   }
 
   @override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Colors.black, Color(0xff362c4c)],
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.black, Color(0xff362c4c)],
+          ),
         ),
-      ),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-           Center(
-            child:SizedBox(
-              width:0.0,
-              child: DefaultTextStyle(
-                style: const TextStyle(
-                  fontSize: 35,
-                  color: Colors.white,
-                  shadows: [
-                    Shadow(
-                      blurRadius: 7.0,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: SizedBox(
+                  width: 0.0,
+                  child: DefaultTextStyle(
+                    style: const TextStyle(
+                      fontSize: 35,
                       color: Colors.white,
-                      offset: Offset(0, 0),
+                      shadows: [
+                        Shadow(
+                          blurRadius: 7.0,
+                          color: Colors.white,
+                          offset: Offset(0, 0),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                child: AnimatedTextKit(
-                  repeatForever: true,
-                  animatedTexts: [
-                    FlickerAnimatedText('KANSO'),
-                  ],
+                    child: AnimatedTextKit(
+                      repeatForever: true,
+                      animatedTexts: [
+                        FlickerAnimatedText(
+                          'KANSO',
+                          textStyle: const TextStyle(
+                            fontSize: 35,
+                            color: Colors.white,
+                            shadows: [
+                              Shadow(
+                                blurRadius: 7.0,
+                                color: Colors.white,
+                                offset: Offset(0, 0),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
-           ),
-            const SizedBox(height: 20),
-            const Text(
-              'Your music, Your story',
-              style: TextStyle(
-                fontSize: 15,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.normal,
-                color: Color.fromARGB(255, 255, 255, 255),
+              const SizedBox(height: 20),
+              const Text(
+                'Your music, Your story',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.normal,
+                  color: Color.fromARGB(255, 255, 255, 255),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
-    ),
-  );
-}
-
+    );
+  }
 }

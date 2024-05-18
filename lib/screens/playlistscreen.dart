@@ -15,7 +15,7 @@ class PlaylistScreen extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color.fromARGB(255, 69, 20, 12).withOpacity(0.8),
+            const Color.fromARGB(255, 69, 20, 12).withOpacity(0.8),
             Colors.deepPurple.shade200.withOpacity(0.8),
           ],
         ),
@@ -23,9 +23,13 @@ class PlaylistScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          iconTheme: const IconThemeData(color: Colors.white),
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: const Text('Playlist'),
+          title: const Text(
+            'Playlist',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
         body: SingleChildScrollView(
           child: Padding(

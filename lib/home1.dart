@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';               //home1
+import 'package:flutter/material.dart'; //home1
 import 'package:floating_bubbles/floating_bubbles.dart';
 import 'package:music_app/screens/home.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -97,30 +98,13 @@ class _AmbianceState extends State<Ambiance>
                       ),
                     ),
                     const SizedBox(height: 16),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 24),
-                      child: TextField(
-                        style: const TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          hintText: 'What will you like to be called?',
-                          hintStyle: const TextStyle(
-                              color: Color.fromRGBO(255, 255, 255, 0.702)),
-                          fillColor: Colors.white.withOpacity(0.2),
-                          filled: true,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            borderSide: BorderSide.none,
-                          ),
-                        ),
-                      ),
-                    ),
                     const SizedBox(height: 16),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomeScreen(),
+                            builder: (context) => const HomeScreen(),
                           ),
                         );
                       },

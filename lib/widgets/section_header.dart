@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';       
+import 'package:flutter/material.dart';
 import 'package:flutter_glow/flutter_glow.dart';
 
 class SectionHeader extends StatelessWidget {
@@ -21,14 +21,14 @@ class SectionHeader extends StatelessWidget {
               title,
               style: Theme.of(context)
                   .textTheme
-                  .headline6!
+                  .titleLarge!
                   .copyWith(fontWeight: FontWeight.w400),
             ),
             Text(
               action,
               style: Theme.of(context)
                   .textTheme
-                  .headline6!
+                  .titleLarge!
                   .copyWith(fontWeight: FontWeight.w100),
             ),
           ],

@@ -2,11 +2,11 @@
 
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_glow/flutter_glow.dart';
 import 'package:music_app/models/playlistmodel.dart';
 import 'package:music_app/models/songmodel.dart';
 import 'package:music_app/widgets/section_header.dart';
-
 
 import '../widgets/SongCard.dart';
 import '../widgets/playlistcard.dart';
@@ -86,7 +86,7 @@ class _TrendingMusic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 10.0, top: 5.0, bottom: 10.0),
+      padding: const EdgeInsets.only(left: 10.0, top: 5.0, bottom: 10.0),
       child: Column(
         children: [
           const Padding(
@@ -218,13 +218,18 @@ class _CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: const GlowIcon(
         Icons.headphones_outlined,
         glowColor: Colors.purple,
+        color: Colors.white,
         blurRadius: 9,
         size: 30,
       ),
-      title:  Center(
-        child: const GlowText(
+      title: const Center(
+        child: GlowText(
           '  K A N S O',
-          style: TextStyle(fontStyle: FontStyle.italic, fontSize: 30),
+          style: TextStyle(
+            fontStyle: FontStyle.italic,
+            fontSize: 30,
+            color: Colors.white,
+          ),
         ),
       ),
       actions: [
